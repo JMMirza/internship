@@ -1,9 +1,15 @@
 {
   "users": [
     {
-      "name": "Jan Muhammad Mirza",
+      "name": "jan",
       "email": "janmuhammadmirza@gmail.com",
-      "password": "1234",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "jin",
+      "email": "jin@hmail.com",
+      "password": "jkmnh ",
       "id": 2
     }
   ]

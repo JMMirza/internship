@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonService } from './common.service';
-
+import{ Router,ActivatedRoute } from '@angular/router';
+import { from } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +16,7 @@ export class AppComponent {
     password:'',
     id:''
   }
-  constructor(private commonService:CommonService){}
+  constructor(private commonService:CommonService, private router: Router){}
   ngOnInit(){
     this.getlatestUser();
   }
@@ -31,8 +32,8 @@ export class AppComponent {
       this.allUser=Response
     })
   }
-  editUser(user){
-    this.userObj=user;
+  editUser(userid: Number){
+    this.router.navigate(['/edit',userid])
   }
   deleteUser(user){
     this.commonService.deleteUser(user).subscribe(()=>{
@@ -44,5 +45,8 @@ export class AppComponent {
     this.commonService.updateUser(this.userObj).subscribe(()=>{
       this.getlatestUser();
     })
+  }
+  gotoPage(pageName: string){
+    this.router.navigate([`${pageName}`])
   }
 }
