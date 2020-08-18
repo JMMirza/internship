@@ -1,16 +1,22 @@
 {
   "users": [
     {
-      "name": "jan",
+      "name": "Jan Muhammad mirza",
       "email": "janmuhammadmirza@gmail.com",
-      "password": "12345",
+      "password": "12335",
       "id": 1
     },
     {
-      "name": "jin",
-      "email": "jin@hmail.com",
-      "password": "jkmnh ",
+      "name": "a4TECH",
+      "email": "A4TECH@GMAIL.COM",
+      "password": "12345",
       "id": 2
+    },
+    {
+      "name": "COMSATS",
+      "email": "cuilahore@edu.pk",
+      "password": "qwerty",
+      "id": 3
     }
   ]
 }

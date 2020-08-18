@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../common.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { from } from 'rxjs';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-pages',
@@ -18,18 +19,15 @@ export class PagesComponent implements OnInit {
     password: '',
     id: '',
   }
+  editUser = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl('')
+  });
   constructor(private commonService: CommonService, private router: ActivatedRoute, private route: Router) { }
   ngOnInit() {
    this.id = +this.router.snapshot.paramMap.get('id');
-   this.header = this.id === 0? 'Create User' : 'Edit User';
-
-   this.router.paramMap.subscribe(
-     params =>{ const usId =+params.get('id');
-     if(usId){
-       
-     }
-
-     })
+    this.header = this.id === 0 ? 'Create User' : 'Edit User';   
    
   }
   
@@ -37,7 +35,7 @@ export class PagesComponent implements OnInit {
     console.log(formObj)
     this.commonService.createUser(formObj).subscribe((Response) => {
       this.getlatestUser(); 
-      this.route.navigateByUrl('user');
+      this.route.navigateByUrl('');
     })
       
   }
@@ -46,12 +44,5 @@ export class PagesComponent implements OnInit {
       this.allUser = Response
     })
   }
-  editUser(user) {
-    this.userObj = user;
-  }
-  updateUser() {
-    this.commonService.updateUser(this.userObj).subscribe(() => {
-      this.getlatestUser();
-    })
-  }
+ 
 }

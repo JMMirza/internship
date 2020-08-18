@@ -1,4 +1,5 @@
 <div class="container">
+    <button class="btn btn-primary" routerLink="">Back</button>
     <h2>{{ header }}</h2>
     <form #myForm="ngForm">
         <div class="form-group">
@@ -14,6 +15,5 @@
             <input type="password" class="form-control" name="password" [(ngModel)]="userObj.password">
         </div>
         <button type="button" class="btn btn-primary" (click)="addUser(myForm.value)">Submit</button>
-        <button type="button" class="btn btn-primary" (click)="updateUser()">Update</button>
     </form>
  </div>
