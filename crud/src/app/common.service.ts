@@ -12,7 +12,6 @@ export class CommonService {
   }
   updateUser(id,data){
     return this._http.put(`${this.URL}/${id}`,data)
-
   }
   getAllUser(){
     return this._http.get("http://localhost:3000/users")

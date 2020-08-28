@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonService } from './common.service';
-import{ Router,ActivatedRoute } from '@angular/router';
+import{ ActivatedRoute } from '@angular/router';
 import { from } from 'rxjs';
 @Component({
   selector: 'app-root',

@@ -9,6 +9,8 @@ import { CommonService } from '../app/common.service';
 import { DisplayComponent } from '../app/display/display.component';
 import { EditComponent } from './edit/edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [CommonService],
   bootstrap: [AppComponent]

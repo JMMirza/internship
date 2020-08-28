@@ -16,12 +16,16 @@ export class EditComponent implements OnInit {
     name: '',
     email: '',
     password: '',
+    dateOfBirth:'',
+    Active:false,
     id: '',
   };
   editUser = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
-    password: new FormControl('')
+    password: new FormControl(''),
+    dateOfBirth: new FormControl(''),
+    Active: new FormControl(true)
   });
   
 
@@ -33,7 +37,9 @@ export class EditComponent implements OnInit {
       this.editUser = new FormGroup({
         name: new FormControl(result['name']),
         email: new FormControl(result['email']),
-        password: new FormControl(result['password'])
+        password: new FormControl(result['password']),
+        dateOfBirth: new FormControl(result['dateOfBirth']),
+        Active: new FormControl('Active')
       });
     })
   }

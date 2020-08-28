@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonService } from '../common.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 import { from } from 'rxjs';
 
 @Component({
@@ -12,21 +13,16 @@ import { from } from 'rxjs';
 
 export class DisplayComponent {
   title = 'crud';
-  allUser: Object;
-  userObj = {
-    name: '',
-    email: '',
-    password: '',
-    id: ''
-  }
+  allUser: object;
+ 
   constructor(private commonService: CommonService, private router: Router) { }
   ngOnInit() {
     this.getlatestUser();
   }
-  
   getlatestUser() {
     this.commonService.getAllUser().subscribe((Response) => {
-      this.allUser = Response
+      this.allUser = Response;
+      
     })
   }
   deleteUser(user) {
@@ -36,4 +32,3 @@ export class DisplayComponent {
 
   }
 }
-

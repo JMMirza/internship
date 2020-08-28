@@ -17,13 +17,12 @@ export class PagesComponent implements OnInit {
     name: '',
     email: '',
     password: '',
-    id: '',
-  }
-  editUser = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl('')
-  });
+    dateOfBirth: '',
+    Active: false,
+    id: ''
+    }
+  
+
   constructor(private commonService: CommonService, private router: ActivatedRoute, private route: Router) { }
   ngOnInit() {
    this.id = +this.router.snapshot.paramMap.get('id');

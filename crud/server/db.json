@@ -3,20 +3,42 @@
     {
       "name": "Jan Muhammad mirza",
       "email": "janmuhammadmirza@gmail.com",
-      "password": "12335",
+      "password": "qwerty",
+      "dob": "2020-08-30",
+      "Active": true,
       "id": 1
     },
     {
-      "name": "a4TECH",
-      "email": "A4TECH@GMAIL.COM",
-      "password": "12345",
+      "name": "COMSATS",
+      "email": "fypsurveilia@gmail.com",
+      "password": "asdfgh",
+      "dateOfBirth": "2020-08-29",
+      "Active": false,
       "id": 2
     },
     {
-      "name": "COMSATS",
-      "email": "cuilahore@edu.pk",
-      "password": "qwerty",
+      "name": "asd",
+      "email": "qwert@gmail.com",
+      "password": "12345",
+      "dateOfBirth": "2020-08-30",
+      "Active": false,
       "id": 3
+    },
+    {
+      "name": "dsf",
+      "email": "fypsurveilia@gmail.com",
+      "password": "12345",
+      "dob": "1999-05-13",
+      "Active": false,
+      "id": 4
+    },
+    {
+      "name": "jan",
+      "email": "fypsurveilia@gmail.com",
+      "password": "asdfg",
+      "dateOfBirth": "2020-08-28T23:50",
+      "Active": "Active",
+      "id": 5
     }
   ]
 }
